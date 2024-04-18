@@ -23,8 +23,12 @@ vim.opt.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.opt.breakindent = true
 
--- Save undo history
+-- Backup, swap and undo files
+vim.opt.swapfile = true
+vim.opt.backup = true
+vim.opt.backupdir = os.getenv 'HOME' .. '/.local/nvim/backup'
 vim.opt.undofile = true
+vim.opt.undodir = os.getenv 'HOME' .. '/.local/nvim/undo'
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
