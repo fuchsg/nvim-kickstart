@@ -38,3 +38,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Cycle through diagnostic markers
 vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Goto next diagnostic marker' })
 vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Goto previous diagnostic marker' })
+
+-- Neotree keymaps
+--vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set('n', '<leader>ex', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neotree file explorer' })
