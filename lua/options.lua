@@ -18,7 +18,7 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = 'unnamedplus'
+-- vim.opt.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -65,4 +65,10 @@ vim.opt.scrolloff = 10
 
 -- Set max text width (use 'gq' to enforce, 'gqG' to enforce until end of file)
 vim.opt.textwidth = 80
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
+
+-- Only yanked text goes to clipboard
+-- Deleted text does not go to the clipboard
+vim.opt.clipboard = ''
+vim.keymap.set({ 'n', 'x' }, 'y', '"+y')
+vim.keymap.set('n', 'p', '""p')
