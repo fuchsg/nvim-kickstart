@@ -99,6 +99,9 @@ require 'options'
 -- [[ Setting keymaps ]]
 require 'keymaps'
 
+-- [[ Autocommands definition ]]
+require 'autocommands'
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
