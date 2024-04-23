@@ -13,3 +13,11 @@ vim.api.nvim_create_autocmd('CmdlineLeave', {
     end)
   end,
 })
+
+-- Fix comment auto-indent for Python and YAML files
+vim.api.nvim_create_autocmd({ 'VimEnter', 'WinEnter', 'BufWinEnter' }, {
+  callback = function()
+    vim.opt.indentkeys:remove '0#'
+  end,
+  pattern = '*',
+})
