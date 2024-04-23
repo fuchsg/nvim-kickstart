@@ -72,3 +72,6 @@ vim.opt.colorcolumn = '80'
 vim.opt.clipboard = ''
 vim.keymap.set({ 'n', 'x' }, 'y', '"+y')
 vim.keymap.set('n', 'p', '""p')
+
+-- Disable auto-indent on comment insertion
+vim.opt.indentkeys:remove '0#'
