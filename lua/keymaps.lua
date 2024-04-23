@@ -42,3 +42,11 @@ vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Goto previ
 -- Neotree keymaps
 --vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>ex', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neotree file explorer' })
+
+-- Toggle left gutter columns (line numbers, signs)
+vim.keymap.set(
+  'n',
+  '<leader>g',
+  '<cmd>set nu!<CR><cmd>exe "set signcolumn=" .. (&signcolumn == "yes" ? "no" : "yes")<CR><cmd>IBLToggle<CR>',
+  { desc = 'Toggle left gutter columns (line numbers, signs)' }
+)
